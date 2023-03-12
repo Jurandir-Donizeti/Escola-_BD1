@@ -1,0 +1,80 @@
+group: Escola_BD1
+
+description[[Bancodedadosbásicosobreumaescola,paraaauladeÁlgebraRelacional,dadisciplinade
+BancodeDadosI-Prof.PauloGiovani
+
+*Arelação _ALUNOS_ contém informações básicas sobre alunosdaescola.
+*Arelação _TURMAS_ contém informações básicas sobre asturmas da escola.
+*Arelação _MATRICULAS_contém informações básicas sobreasmatrículas realizadas pelos alunos.
+*Arelação _DISCIPLINAS_ contém informações básicas sobre as disciplinas ministradas na escola.
+*Arelação_PROFESSORES_ contém informações básicas sobre os professores da escola.
+*Arelacão _AULAS_ contém informações básicas sobre as aulas que são ministradas durante a semana]]
+
+ALUNOS={
+
+RA,Aluno,Sexo,Telefone
+1,'Ana', F,99660-9090
+2,'João', M, 99661-9080
+3,'Pedro', M,99760-6070
+4,'Carlos', M,99761-7070
+5,'Maria,' F,99797-8080
+6,'Renata',F,99776-9090
+
+}
+
+TURMAS ={
+
+CodTurma,Turma
+T1, 'Turma1'
+T2, 'Turma21'
+T3, 'Turma31'
+T4, 'Turma4'
+}
+
+MATRICULAS = {
+
+CodMatricula, DataMatricula, RA, CodTurma
+1,'02/02/2022', 5, T1
+2,'02/02/2022', 3, T1
+3,'03/02/2022', 4, T3
+4,'05/02/2022', 6, T3
+5,'10/02/2022', 2, T1
+6, '15/10/2022', 1, T2
+}
+
+
+DISCIPLINAS={
+
+CodDisciplina,Disciplina,RA
+BDD,'Banco de Dados', 1
+EDD,'Estrutura de Dados', 2
+LOP,'Lógica de Programação', 3
+RDC,'Redes deComputadores', 4
+ANS,'Análise de Sistemas', 5
+LIP,'Linguagem de Programação',  3
+}
+
+PROFESSORES={
+
+RA, Professor
+1, 'Paulo Giovani'
+2, 'Marques Sousa'
+3, 'Augusto Manzano'
+4, 'João Evangelista'
+5,'Elton Ferreira'
+}
+
+AULAS={
+
+CodAula,DiaSemana,Horario,CodTurma, CodDisciplina
+1, 'Segunda-feira', '19:00' , T3, BDD
+2, 'Sexta-feira', '19:00', T3, BDD
+3, 'Segunda-feira','21:00', T3, EDD
+4, 'Terça-feira', '19:00' , T1, lOP
+5, 'Quarta-feira', '21:00', T2, ANS
+6,'Sexta-feira', '19:00', T2, LIP
+7,'Quinta-feira','119:00', T4, RDC
+
+}
+
+
